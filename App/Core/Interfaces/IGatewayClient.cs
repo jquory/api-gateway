@@ -3,7 +3,7 @@ namespace App.Core.Interfaces;
 public interface IGatewayClient
 {
     Task<T?> SendAsync<T>(
-        string message,
+        string serviceName,
         string path,
         HttpMethod httpMethod,
         object? body = null,
