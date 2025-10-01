@@ -1,6 +1,9 @@
 namespace App.Core.Exceptions;
 
-public class GatewayException(string message, int statusCode = 500) : Exception(message);
+public class GatewayException(string message, int statusCode = 500) : Exception(message)
+{
+    public int StatusCode { get; set; } = statusCode;
+}
 
 public class ServiceUnavailableException: GatewayException
 {
